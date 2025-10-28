@@ -1,69 +1,183 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jon Spriggs | Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-  <script src="script.js" defer></script>
+    <style>
+        body {
+            transition: opacity ease-in 0.2s;
+        }
+
+        body[unresolved] {
+            opacity: 0;
+            display: block;
+            overflow: hidden;
+            position: relative;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-  <header>
-    <h1>Jon Spriggs</h1>
-    <nav>
-      <a href="#portfolio">Portfolio</a>
-      <a href="mailto:jayspriggs2@gmail.com">Contact</a>
-      <a href="https://github.com/foundcash" target="_blank">GitHub</a>
-    </nav>
-  </header>
+<header class="header">
+    <div class="container">
+        <h1 class="header__title">Jon Spriggs</h1>
+        <nav class="header__nav">
+            <ul class="header__nav-list">
+                <li class="header__nav-item"><a href="#" class="header__nav-link">Home</a></li>
+                <li class="header__nav-item"><a href="#portfolio" class="header__nav-link">Portfolio</a></li>
+                <li class="header__nav-item header__nav-item--contact">
+                    <a href="#contact" class="header__nav-link">Contact</a>
+                </li>
+                <li class="header__nav-item header__nav-item--github">
+                    <a href="https://github.com/foundcash" target="_blank" class="header__nav-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
 
-  <section class="intro">
-    <h2>Hi, I'm Jon Spriggs 💻</h2>
-    <p>I'm a Front-End Developer passionate about crafting clean, interactive, and user-friendly web experiences. Check out some of my work below.</p>
-  </section>
+<section class="intro">
+    <div class="container">
+        <h1 class="intro__title">Hi my name is Jon Spriggs 💻</h1>
+        <h2 class="intro__subtitle">I am a Front End Developer, I love to code on the web and create user-friendly UI. Check my work below.</h2>
+    </div>
+</section>
 
-  <section id="portfolio" class="projects">
-    <div class="project">
-      <img src="images/apple-mbp.png" alt="MacBook Pro" class="clickable-image" />
-      <h3>MacBook Pro</h3>
-      <a href="https://github.com/foundcash" target="_blank">View Project ↗</a>
+<section id="portfolio" class="gallery">
+    <div class="container">
+        <div class="gallery__grid">
+            <div class="gallery__item">
+                <label for="modal-1">
+                    <span class="gallery__image-container" style="background-image: url('images/apple-mbp.png');"></span>
+                </label>
+                <input type="checkbox" id="modal-1" class="gallery__modal-checkbox">
+                <div class="gallery__modal">
+                    <label for="modal-1" class="gallery__modal-close">×</label>
+                    <img src="images/apple-mbp.png" alt="Apple MacBook Pro Website" class="gallery__modal-image">
+                </div>
+                <div class="gallery__item-info">
+                    <span class="gallery__item-title">MacBook Pro</span>
+                    <a href="https://apple-mbp.vercel.app" target="_blank" class="gallery__item-link">
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="gallery__item">
+                <label for="modal-2">
+                    <span class="gallery__image-container" style="background-image: url('images/codeswitcher.png');"></span>
+                </label>
+                <input type="checkbox" id="modal-2" class="gallery__modal-checkbox">
+                <div class="gallery__modal">
+                    <label for="modal-2" class="gallery__modal-close">×</label>
+                    <img src="images/codeswitcher.png" alt="Code Switcher Website" class="gallery__modal-image">
+                </div>
+                <div class="gallery__item-info">
+                    <span class="gallery__item-title">Code Switcher</span>
+                    <a href="https://codeswitcher.vercel.app" target="_blank" class="gallery__item-link">
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="gallery__item">
+                <label for="modal-3">
+                    <span class="gallery__image-container" style="background-image: url('images/calculator.png');"></span>
+                </label>
+                <input type="checkbox" id="modal-3" class="gallery__modal-checkbox">
+                <div class="gallery__modal">
+                    <label for="modal-3" class="gallery__modal-close">×</label>
+                    <img src="images/calculator.png" alt="Calculator HTML & CSS Only" class="gallery__modal-image">
+                </div>
+                <div class="gallery__item-info">
+                    <span class="gallery__item-title">Calculator</span>
+                    <a href="https://codepen.io/gambhirsharma/pen/ExwBKop" target="_blank" class="gallery__item-link">
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="gallery__item">
+                <label for="modal-4">
+                    <span class="gallery__image-container" style="background-image: url('images/DoomScroll.png');"></span>
+                </label>
+                <input type="checkbox" id="modal-4" class="gallery__modal-checkbox">
+                <div class="gallery__modal">
+                    <label for="modal-4" class="gallery__modal-close">×</label>
+                    <img src="images/DoomScroll.png" alt="Doom Scroll" class="gallery__modal-image">
+                </div>
+                <div class="gallery__item-info">
+                    <span class="gallery__item-title">Doom Scroll</span>
+                    <a href="https://codepen.io/cobra_winfrey/pen/oNOMRav" target="_blank" class="gallery__item-link">
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="gallery__item">
+                <label for="modal-5">
+                    <span class="gallery__image-container" style="background-image: url('images/glass-gradient-card.png');"></span>
+                </label>
+                <input type="checkbox" id="modal-5" class="gallery__modal-checkbox">
+                <div class="gallery__modal">
+                    <label for="modal-5" class="gallery__modal-close">×</label>
+                    <img src="images/glass-gradient-card.png" alt="Glass Gradient Card" class="gallery__modal-image">
+                </div>
+                <div class="gallery__item-info">
+                    <span class="gallery__item-title">Glass Gradient Card</span>
+                    <a href="https://codepen.io/Podgro/pen/oNOKYqr" target="_blank" class="gallery__item-link">
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="gallery__item">
+                <label for="modal-6">
+                    <span class="gallery__image-container" style="background-image: url('images/computer-diorama.png');"></span>
+                </label>
+                <input type="checkbox" id="modal-6" class="gallery__modal-checkbox">
+                <div class="gallery__modal">
+                    <label for="modal-6" class="gallery__modal-close">×</label>
+                    <img src="images/computer-diorama.png" alt="computer diorama" class="gallery__modal-image">
+                </div>
+                <div class="gallery__item-info">
+                    <span class="gallery__item-title">Computer Diorama</span>
+                    <a href="https://codepen.io/ricardoolivaalonso/pen/poYEpwP" target="_blank" class="gallery__item-link">
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="project">
-      <img src="images/codeswitcher.png" alt="Code Switcher" class="clickable-image" />
-      <h3>Code Switcher</h3>
-      <a href="https://github.com/foundcash" target="_blank">View Project ↗</a>
-    </div>
-    <div class="project">
-      <img src="images/calculator.png" alt="Calculator" class="clickable-image" />
-      <h3>Calculator</h3>
-      <a href="https://github.com/foundcash" target="_blank">View Project ↗</a>
-    </div>
-    <div class="project">
-      <img src="images/DoomScroll.png" alt="Doom Scroll" class="clickable-image" />
-      <h3>Doom Scroll</h3>
-      <a href="https://github.com/foundcash" target="_blank">View Project ↗</a>
-    </div>
-    <div class="project">
-      <img src="images/glass-gradient-card.png" alt="Interactive Gradient" class="clickable-image" />
-      <h3>Interactive Gradient</h3>
-      <a href="https://github.com/foundcash" target="_blank">View Project ↗</a>
-    </div>
-    <div class="project">
-      <img src="images/computer-diorama.png" alt="Computer Diorama" class="clickable-image" />
-      <h3>Computer Diorama</h3>
-      <a href="https://github.com/foundcash" target="_blank">View Project ↗</a>
-    </div>
-  </section>
+</section>
 
-  <!-- Image Modal -->
-  <div id="imageModal" class="modal">
-    <span class="close">&times;</span>
-    <img class="modal-content" id="modalImg" />
-    <div id="caption"></div>
-  </div>
+<section id="contact" class="contact">
+    <div class="container">
+        <h2 class="contact__title">Contact Me</h2>
+        <p class="contact__description">Feel free to reach out to me via email jayspriggs2@gmail.com</p>
+     
+    </div>
+</section>
 
-  <footer>
-    <p>© 2025 Jon Spriggs — <a href="mailto:jayspriggs2@gmail.com">jayspriggs2@gmail.com</a></p>
-  </footer>
+<footer class="footer">
+    <div class="container">
+        <p class="footer__text">© 2024 Jon Spriggs. All rights reserved.</p>
+    </div>
+</footer>
+
+
+<div id="volume-booster-visusalizer">
+                    <div class="sound">
+                        <div class="sound-icon"></div>
+                        <div class="sound-wave sound-wave_one"></div>
+                        <div class="sound-wave sound-wave_two"></div>
+                        <div class="sound-wave sound-wave_three"></div>
+                    </div>
+                    <div class="segments-box">
+                        <div data-range="1-20" class="segment"><span></span></div>
+                        <div data-range="21-40" class="segment"><span></span></div>
+                        <div data-range="41-60" class="segment"><span></span></div>
+                        <div data-range="61-80" class="segment"><span></span></div>
+                        <div data-range="81-100" class="segment"><span></span></div>
+                    </div>
+                </div>
 </body>
 </html>
