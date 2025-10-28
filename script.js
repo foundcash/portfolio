@@ -1,10 +1,12 @@
-// Smooth scroll for navigation links
-document.querySelectorAll('nav a[href^="#"]').forEach(link => {
-  link.addEventListener('click', e => {
-    e.preventDefault();
-    const target = document.querySelector(link.getAttribute('href'));
-    if (target) {
-      target.scrollIntoView({ behavior: 'smooth' });
-    }
-  });
-});
+// Open modal
+function openModal(src) {
+  const modal = document.getElementById("modal");
+  const modalImg = document.getElementById("modalImg");
+  modal.style.display = "flex";
+  modalImg.src = src;
+}
+
+// Close modal
+function closeModal() {
+  document.getElementById("modal").style.display = "none";
+}
