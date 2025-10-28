@@ -1,14 +1,10 @@
-const scriptElements = Array.from(document.querySelectorAll('script'));
-const data = await Promise.all(scriptElements.map(async (script) => {
-  if (script.src) {
-    try {
-      const response = await fetch(script.src);
-      const text = await response.text();
-      return { type: 'external', src: script.src, code: text };
-    } catch (e) {
-      return { type: 'external', src: script.src, error: 'Could not fetch script content due to cross-origin restrictions or network error.' };
+// Smooth scroll for navigation links
+document.querySelectorAll('nav a[href^="#"]').forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    const target = document.querySelector(link.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth' });
     }
-  } else {
-    return { type: 'inline', code: script.textContent };
-  }
-}));
+  });
+});
