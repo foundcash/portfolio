@@ -124,13 +124,22 @@ nav {
   text-decoration: underline;
 }
 
-/* Contact */
+/* Contact Section */
 .contact {
   text-align: center;
-  background: #f9f9f9;
-  padding: 2rem 1rem;
-  border-top: 1px solid #eee;
+  padding: 100px 20px; /* increase top/bottom spacing */
+  background-color: #fff;
+  color: #333;
 }
+
+/* Contact heading */
+.contact h2 {
+  font-size: 2rem;
+  font-weight: 700; /* makes "Contact Me" bold */
+  margin-bottom: 20px;
+}
+
+
 
 .contact a {
   color: #007bff;
@@ -168,3 +177,4 @@ nav {
     grid-template-columns: 1fr;
   }
 }
+
