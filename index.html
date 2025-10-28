@@ -5,58 +5,71 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jon Spriggs | Portfolio</title>
   <link rel="stylesheet" href="style.css" />
-  <script src="script.js" defer></script>
 </head>
 <body>
   <header>
-    <h1>Jon Spriggs</h1>
     <nav>
-      <a href="#portfolio">Portfolio</a>
-      <a href="mailto:jayspriggs2@gmail.com">Contact</a>
-      <a href="https://github.com/foundcash" target="_blank">GitHub</a>
+      <h2 class="logo">Jon Spriggs</h2>
+      <ul class="nav-links">
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="https://github.com/YOUR-GITHUB-USERNAME" target="_blank">GitHub</a></li>
+      </ul>
     </nav>
   </header>
 
-  <section class="intro">
-    <h2>Hi, I'm Jon Spriggs 💻</h2>
-    <p>I'm a Front-End Developer passionate about crafting clean, interactive, and user-friendly web experiences. Check out some of my work below.</p>
+  <section id="home" class="intro">
+    <h1>Hi, I'm Jon Spriggs 💻</h1>
+    <p>
+      I'm a Front-End Developer passionate about crafting clean, interactive, and user-friendly web experiences.
+      Check out some of my work below.
+    </p>
   </section>
 
-  <section id="portfolio" class="projects">
-    <div class="project">
-      <img src="images/apple-mbp.png" alt="MacBook Pro" />
-      <h3>MacBook Pro</h3>
-      <a href="https://github.com/foundcash" target="_blank">View Project ↗</a>
-    </div>
-    <div class="project">
-      <img src="images/codeswitcher.png" alt="Code Switcher" />
-      <h3>Code Switcher</h3>
-      <a href="https://github.com/foundcash" target="_blank">View Project ↗</a>
-    </div>
-    <div class="project">
-      <img src="images/calculator.png" alt="Calculator" />
-      <h3>Calculator</h3>
-      <a href="https://github.com/foundcash" target="_blank">View Project ↗</a>
-    </div>
-    <div class="project">
-      <img src="images/DoomScroll.png" alt="Doom Scroll" />
-      <h3>Doom Scroll</h3>
-      <a href="https://github.com/foundcash" target="_blank">View Project ↗</a>
-    </div>
-    <div class="project">
-      <img src="images/glass-gradient-card.png" alt="Interactive Gradient" />
-      <h3>Interactive Gradient</h3>
-      <a href="https://github.com/foundcash" target="_blank">View Project ↗</a>
-    </div>
-    <div class="project">
-      <img src="images/computer-diorama.png" alt="Computer Diorama" />
-      <h3>Computer Diorama</h3>
-      <a href="https://github.com/foundcash" target="_blank">View Project ↗</a>
+  <section id="portfolio" class="portfolio">
+    <div class="projects">
+      <div class="card" onclick="openModal('images/project1.jpg')">
+        <img src="images/project1.jpg" alt="MacBook Pro" />
+        <h3>MacBook Pro</h3>
+        <p><a href="#">View Project ↗</a></p>
+      </div>
+      <div class="card" onclick="openModal('images/project2.jpg')">
+        <img src="images/project2.jpg" alt="Code Switcher" />
+        <h3>Code Switcher</h3>
+        <p><a href="#">View Project ↗</a></p>
+      </div>
+      <div class="card" onclick="openModal('images/project3.jpg')">
+        <img src="images/project3.jpg" alt="Calculator" />
+        <h3>Calculator</h3>
+        <p><a href="#">View Project ↗</a></p>
+      </div>
+      <div class="card" onclick="openModal('images/project4.jpg')">
+        <img src="images/project4.jpg" alt="Doom Scroll" />
+        <h3>Doom Scroll</h3>
+        <p><a href="#">View Project ↗</a></p>
+      </div>
+      <div class="card" onclick="openModal('images/project5.jpg')">
+        <img src="images/project5.jpg" alt="Interactive Gradient" />
+        <h3>Interactive Gradient</h3>
+        <p><a href="#">View Project ↗</a></p>
+      </div>
+      <div class="card" onclick="openModal('images/project6.jpg')">
+        <img src="images/project6.jpg" alt="Computer Diorama" />
+        <h3>Computer Diorama</h3>
+        <p><a href="#">View Project ↗</a></p>
+      </div>
     </div>
   </section>
 
-  <footer>
+  <section id="contact" class="contact">
     <p>© 2025 Jon Spriggs — <a href="mailto:jayspriggs2@gmail.com">jayspriggs2@gmail.com</a></p>
-  </footer>
+  </section>
+
+  <!-- Modal -->
+  <div id="modal" class="modal" onclick="closeModal()">
+    <img id="modalImg" src="" alt="Project Preview">
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
